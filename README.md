@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# RipToob 
-=======
 # RipToob
->>>>>>> a85a830d5a096dfdcaa77e11df61572d328bd42b
 
 A [yt-dlp](https://github.com/yt-dlp/yt-dlp) gui. 
 
@@ -23,7 +19,3 @@ Download videos as mp4, or extract audio to .wav or .mp3. All files download dir
 - Enable destination specific downloads
 - Check box for best possible video quality
 - Advanced options
-<<<<<<< HEAD
-=======
-- Auto update yt-dlp and ffmpeg components.
->>>>>>> a85a830d5a096dfdcaa77e11df61572d328bd42b
