@@ -42,9 +42,12 @@ namespace RipTube_YTDLP_GUI
             this.downLoadButton = new System.Windows.Forms.Button();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.outputBox = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -165,26 +168,53 @@ namespace RipTube_YTDLP_GUI
             this.label4.TabIndex = 6;
             this.label4.Text = "github.com/anonfoxer2/";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.outputBox);
+            this.groupBox3.Location = new System.Drawing.Point(12, 114);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(500, 382);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Console";
+            // 
+            // outputBox
+            // 
+            this.outputBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.outputBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.outputBox.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.outputBox.Location = new System.Drawing.Point(3, 24);
+            this.outputBox.Name = "outputBox";
+            this.outputBox.ReadOnly = true;
+            this.outputBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.outputBox.Size = new System.Drawing.Size(494, 355);
+            this.outputBox.TabIndex = 0;
+            this.outputBox.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(522, 124);
+            this.ClientSize = new System.Drawing.Size(524, 501);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.downLoadButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "RipToob";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,6 +234,8 @@ namespace RipTube_YTDLP_GUI
         private System.Windows.Forms.Button downLoadButton;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RichTextBox outputBox;
     }
 }
 
