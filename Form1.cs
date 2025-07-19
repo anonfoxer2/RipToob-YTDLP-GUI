@@ -30,7 +30,7 @@ namespace RipTube_YTDLP_GUI
             // Create a ProcessStartInfo object to configure how the external process runs
             var processInfo = new ProcessStartInfo
             {
-                FileName = exePath,                  // Path to the yt-dlp.exe executable
+                FileName = ytPath,                  // Path to the yt-dlp.exe executable
                 Arguments = arguments,               // Command-line arguments (e.g., "-U" or download options)
                 RedirectStandardOutput = true,       // Capture standard output stream
                 RedirectStandardError = true,        // Capture error output stream
@@ -126,30 +126,37 @@ namespace RipTube_YTDLP_GUI
                 return;
             }
 
-            // Get the full path to yt-dlp.exe in the application's directory
-            string exePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "yt-dlp.exe");
+            // Get the full path to yt-dlp.exe and ffmpeg.exe in the application's directory
+            string ytPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "yt-dlp.exe");
+            string ffPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ffmpeg.exe");
 
             // Verify yt-dlp.exe exists
-            if (!File.Exists(exePath))
+            if (!File.Exists(ytPath))
             {
                 MessageBox.Show("yt-dlp.exe not found in application directory.");
+                return;
+            }
+            // Verify ffmpeg.exe exists. it won't ever be called directly for the program but it's
+            // required to download mp4 and mp3 formats, so might as well double check.
+            if (!File.Exists(ffPath))
+            {
+                MessageBox.Show("ffmpeg components not found in application directory. ffmpeg is required to get mp4 and mp3 filetypes.");
                 return;
             }
 
             try
             {
-                // Inform the user in the output window that an update is starting
+                // update yt-dlp.exe
                 AppendOutput("RipToob > Updating yt-dlp...");
-                await RunYtDlpProcessAsync(exePath, "-U"); // Run yt-dlp.exe -U with live output
-
-                // Inform the user the download is starting
+                await RunYtDlpProcessAsync(ytPath, "-U"); // Run yt-dlp.exe -U with live output
+                
                 AppendOutput("RipToob > Starting download...");
 
                 // Format the yt-dlp command with the selected options and video URL
                 string arguments = string.Format(downloadArgs, url);
 
                 // Start the actual download process with live output
-                await RunYtDlpProcessAsync(exePath, arguments);
+                await RunYtDlpProcessAsync(ytPath, arguments);
 
                 // Final confirmation message
                 AppendOutput("RipToob > Operation successful.");
