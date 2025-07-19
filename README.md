@@ -14,10 +14,9 @@ Download videos as mp4, or extract audio to .wav or .mp3. All files download dir
 
 ## How to
 1. Put yt-dlp and ffmpeg into the root directory of the application. 
-2. Find a youtube video link (and trim off any extra parts to the link, such as if its a playlist).
+2. Find a supported link and paste it in.
 3. Choose file type and click download.
 
 ### Potential Updates
 - Enable destination specific downloads
-- Check box for best possible video quality
 - Advanced options
