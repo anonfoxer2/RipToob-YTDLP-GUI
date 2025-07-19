@@ -163,7 +163,16 @@ namespace RipTube_YTDLP_GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+/* this project started because I needed something to speed up the process of downloading my library from Spotify. 
+after learning they have been funding military AI, I've decided that I want to separate myself from them completely as I
+don't support the use of technology to commit murder and genocide. I mean fuck I just wanna live in a world where I can feel comfortable knowing that at least SOMETHING that I do that I enjoy
+is at least done SOMEWHAT ethically, but every chain of command falls back on exploiting SOMEONE because capitalism is AWFUL. every fucking day I find out something else I use, enjoy, or partake in is
+implicated in some deep horrible exploitation of some minority just so that I can live a kushy life with cheap fast fashion bullshit and 
+fast food to make us all fatter, to make us all more dependant and adoring of the 0.000001% at the very top of everything. it's kinda hilarious that piracy always has been and always will be the most
+ethical way of consuming so many things, to the point where even the creators of media put their media on piracy sites for people to view. piracy sites have less ads than YouTube or Netflix or Hulu.
+God bless breaking the law, am I right!!! not that I'm saying you should do that, or that I'm doing that, definitely not with this tool. but yeah, I wanted something to make the process of preserving the music I like and find a new service.
+if anyone knows of a service that will recommend new music like Spotify did but that works with an offline library, please hit me up. if anyone even reads this bullshit anyways. why can't my code be an art project huh? or like a political statement??
+Any future employer who sees this please understand that I promise I'm chill I also just don't think that we should be using tech to automate human slaughter.*/
         }
     }
 }
